@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <title>실험적 신규 기능</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+        body {
+            margin: 0;
+            color: white;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, 'Noto Sans KR', sans-serif;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+
+
+        :root {
+            --primary-color: #0C7531;
+            --bg-color: #121212;
+            --card-bg-color: #1E1E1E;
+            --text-primary: #E0E0E0;
+            --text-secondary: #A0A0A0;
+            --border-color: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* 언더바들 */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 480px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--card-bg-color);
+            padding: 10px 0;
+            border-top: 1px solid var(--border-color);
+            box-shadow: 0 -5px 15px rgba(0, 0, 0, .2);
+            z-index: 110;
+            pointer-events: auto;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 12px;
+            transition: color .3s;
+        }
+
+        .nav-item i {
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .nav-item.active {
+            color: var(--primary-color);
+        }
+        /* 맨 위 오른쪽 글귀 */
+        .sub-page-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            gap: 15px;
+            pointer-events: auto;
+        }
+        .header-title h2 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .header-title p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            height: 100%;
+            padding: 0 20px;
+            z-index: 10;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="sub-page-header">
+            <div class="header-title">
+                <h2>주제</h2> <!--본인이 만든거 이름 적으면 됨-->
+                <p>실험실</p>
+            </div>
+        </header>
+        <nav class="bottom-nav">
+            <a href="main.php" class="nav-item">
+                <i class="fa-solid fa-house"></i>
+                <span>홈</span>
+            </a>
+            <a href="community.php" class="nav-item">
+                <i class="fa-solid fa-users"></i> 
+                <span>커뮤니티</span>
+            </a>
+            <a href="/labs/???.php" class="nav-item"> <!--??? 파일 이름-->
+                <i class="fa-solid fa-flask">::before</i>
+                <span>실험실</span>
+            </a>
+            <a href="menu.php" class="nav-item">
+                <i class="fa-solid fa-bars"></i>
+                <span>전체메뉴</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
